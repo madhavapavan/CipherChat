@@ -5,7 +5,7 @@ import { ChatProvider } from '../contexts/ChatContext';
 function Chat() {
   return (
     <ChatProvider>
-      <div className="h-screen w-full bg-dark-500 flex flex-col md:flex-row overflow-hidden">
+      <div className="h-screen w-full bg-dark-500 flex flex-col md:flex-row overflow-hidden pt-0 relative -top-5">
         <Sidebar />
         <div className="flex-grow h-full">
           <ChatArea />
