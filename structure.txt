@@ -1,0 +1,33 @@
+project/
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+├── eslint.config.js
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   │   ├── Auth/
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── ProfileForm.jsx
+│   │   │   └── RegisterForm.jsx
+│   │   └── Chat/
+│   │       ├── ChatArea.jsx
+│   │       ├── MessageBubble.jsx
+│   │       ├── NotificationPanel.jsx
+│   │       ├── Sidebar.jsx
+│   │       └── UserList.jsx
+│   ├── contexts/
+│   │   ├── AuthContext.jsx
+│   │   └── ChatContext.jsx
+│   ├── pages/
+│   │   ├── Auth.jsx
+│   │   ├── Chat.jsx
+│   │   └── Profile.jsx
+│   ├── services/
+│   │   └── appwrite.js
+│   └── utils/
+│       └── encryption.js
