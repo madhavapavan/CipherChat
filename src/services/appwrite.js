@@ -2,18 +2,18 @@ import { Client, Account, Databases, Storage, Query } from 'appwrite';
 
 const client = new Client();
 client
-  .setEndpoint('https://fra.cloud.appwrite.io/v1')
-  .setProject('680a6b1a000b40a967fc');
+  .setEndpoint(import.meta.env.APPWRITE_ENDPOINT)
+  .setProject(import.meta.env.APPWRITE_PROJECT_ID);
 
 export const account = new Account(client);
 export const databases = new Databases(client);
 export const storage = new Storage(client);
 
-export const DATABASE_ID = '680a7646000a1490e095';
-export const USERS_COLLECTION_ID = '680a7b9800297b2cc88c';
-export const MESSAGES_COLLECTION_ID = '680a7bbf001882caf847';
-export const REQUESTS_COLLECTION_ID = '680a7c790016f8738438';
-export const FILES_COLLECTION_ID = '680a7a94001e04b31579';
+export const DATABASE_ID = import.meta.env.DATABASE_ID;
+export const USERS_COLLECTION_ID = import.meta.env.USERS_COLLECTION_ID;
+export const MESSAGES_COLLECTION_ID = import.meta.env.MESSAGES_COLLECTION_ID;
+export const REQUESTS_COLLECTION_ID = import.meta.env.REQUESTS_COLLECTION_ID;
+export const FILES_COLLECTION_ID = import.meta.env.FILES_COLLECTION_ID;
 
 export const authService = {
   async createAccount(email, password) {
