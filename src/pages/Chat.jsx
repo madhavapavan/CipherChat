@@ -4,14 +4,18 @@ import { ChatProvider } from '../contexts/ChatContext';
 
 function Chat() {
   return (
-    <ChatProvider>
-      <div className="h-screen w-full bg-dark-500 flex flex-col md:flex-row overflow-hidden pt-0 relative -top-5">
-        <Sidebar />
-        <div className="flex-grow h-full">
-          <ChatArea />
-        </div>
+    <div className="min-h-screen w-full bg-dark-500 flex items-center justify-center p-2">
+      <div className="w-[95vw] max-w-[90vw] h-[96vh] max-h-[96vh] min-h-[720px] bg-dark-400 rounded-xl shadow-2xl overflow-hidden border border-dark-300">
+        <ChatProvider>
+          <div className="h-full w-full flex flex-col md:flex-row">
+            <Sidebar />
+            <div className="flex-grow h-full overflow-auto">
+              <ChatArea />
+            </div>
+          </div>
+        </ChatProvider>
       </div>
-    </ChatProvider>
+    </div>
   );
 }
 

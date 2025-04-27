@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import Landing from './pages/Landing';
 import Auth from './pages/Auth';
 import Profile from './pages/Profile';
 import Chat from './pages/Chat';
@@ -98,7 +99,8 @@ function AppContent() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AuthRoute><Auth /></AuthRoute>} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/auth" element={<AuthRoute><Auth /></AuthRoute>} />
         <Route path="/profile" element={<ProfileRoute><Profile /></ProfileRoute>} />
         <Route path="/chat" element={<ChatRoute><Chat /></ChatRoute>} />
         <Route path="*" element={<Navigate to="/" replace />} />
